@@ -2,85 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>whodat_a.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 01 Jun 2017 20:27:04 -0500</lastBuildDate>
     
-	<atom:link href="whodat_a.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Visualization</title>
-      <link>whodat_a.netlify.com/tags/visualization/</link>
+      <link>/tags/visualization/</link>
       <pubDate>Thu, 01 Jun 2017 20:27:04 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/visualization/</guid>
+      <guid>/tags/visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>r</title>
-      <link>whodat_a.netlify.com/tags/r/</link>
+      <link>/tags/r/</link>
       <pubDate>Thu, 01 Jun 2017 20:15:43 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/r/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>whodat_a.netlify.com/tags/tutorial/</link>
+      <link>/tags/tutorial/</link>
       <pubDate>Thu, 01 Jun 2017 20:15:43 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/tutorial/</guid>
+      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Medicine</title>
-      <link>whodat_a.netlify.com/tags/medicine/</link>
-      <pubDate>Tue, 14 Mar 2017 22:20:26 -0500</pubDate>
+      <link>/tags/medicine/</link>
+      <pubDate>Thu, 01 Jun 2017 20:05:07 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/medicine/</guid>
+      <guid>/tags/medicine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Residency</title>
-      <link>whodat_a.netlify.com/tags/residency/</link>
+      <link>/tags/residency/</link>
       <pubDate>Tue, 14 Mar 2017 22:20:26 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/residency/</guid>
+      <guid>/tags/residency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data</title>
-      <link>whodat_a.netlify.com/tags/data/</link>
+      <link>/tags/data/</link>
       <pubDate>Fri, 03 Feb 2017 22:21:56 -0600</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/data/</guid>
+      <guid>/tags/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Politics</title>
-      <link>whodat_a.netlify.com/tags/politics/</link>
+      <link>/tags/politics/</link>
       <pubDate>Fri, 03 Feb 2017 22:21:56 -0600</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/politics/</guid>
+      <guid>/tags/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep-learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>demo</title>
+      <link>/tags/demo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>whodat_a.netlify.com/tags/design/</link>
+      <link>/tags/design/</link>
       <pubDate>Sat, 18 Oct 2014 17:47:50 -0500</pubDate>
       
-      <guid>whodat_a.netlify.com/tags/design/</guid>
+      <guid>/tags/design/</guid>
       <description></description>
     </item>
     
