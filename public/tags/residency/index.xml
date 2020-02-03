@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Residency on </title>
-    <link>/whodat_a.netlify.com/tags/residency/</link>
+    <link>whodat_a.netlify.com/tags/residency/</link>
     <description>Recent content in Residency on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 14 Mar 2017 22:20:26 -0500</lastBuildDate>
     
-	<atom:link href="/whodat_a.netlify.com/tags/residency/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="whodat_a.netlify.com/tags/residency/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding Duty Hours and the ACGME</title>
-      <link>/whodat_a.netlify.com/post/acgme_work_hours/</link>
+      <link>whodat_a.netlify.com/post/acgme_work_hours/</link>
       <pubDate>Tue, 14 Mar 2017 22:20:26 -0500</pubDate>
       
-      <guid>/whodat_a.netlify.com/post/acgme_work_hours/</guid>
+      <guid>whodat_a.netlify.com/post/acgme_work_hours/</guid>
       <description>For anyone who has spent time in the hospital, the not-so-well-kept secret is that residents are the ones you’re likely to see most often. About 25% hospitals have residents according to the ACGME, and percentage increases when you look Critical Access Hospitals.
 Residents are the grunts of the medical world. They are full-fledged MDs who work worse hours for less pay than most nursing staff. Residents are the ones in the hospital overnight admitting patients and they are probably some of the first people you see in the morning as they run around trying to keep a lid on everything before the attending, or chief physician, to get to the hospital.</description>
     </item>

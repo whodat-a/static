@@ -3,122 +3,97 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/whodat_a.netlify.com/</loc>
+    <loc>whodat_a.netlify.com/</loc>
     <lastmod>2017-06-01T20:27:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/h1b_cartogram/</loc>
+    <loc>whodat_a.netlify.com/projects/h1b_cartogram/</loc>
     <lastmod>2017-06-01T20:27:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/</loc>
+    <loc>whodat_a.netlify.com/projects/</loc>
     <lastmod>2017-06-01T20:27:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/</loc>
+    <loc>whodat_a.netlify.com/tags/</loc>
     <lastmod>2017-06-01T20:27:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/visualization/</loc>
+    <loc>whodat_a.netlify.com/tags/visualization/</loc>
     <lastmod>2017-06-01T20:27:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/post/making_cartogram/</loc>
+    <loc>whodat_a.netlify.com/post/making_cartogram/</loc>
     <lastmod>2017-06-01T20:15:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/post/</loc>
+    <loc>whodat_a.netlify.com/post/</loc>
     <lastmod>2017-06-01T20:15:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/r/</loc>
+    <loc>whodat_a.netlify.com/tags/r/</loc>
     <lastmod>2017-06-01T20:15:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/tutorial/</loc>
+    <loc>whodat_a.netlify.com/tags/tutorial/</loc>
     <lastmod>2017-06-01T20:15:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/post/h1b_cartogram/</loc>
-    <lastmod>2017-06-01T20:05:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/tags/medicine/</loc>
-    <lastmod>2017-06-01T20:05:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/tags/residency/</loc>
+    <loc>whodat_a.netlify.com/tags/medicine/</loc>
     <lastmod>2017-03-14T22:20:26-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/post/acgme_work_hours/</loc>
+    <loc>whodat_a.netlify.com/tags/residency/</loc>
     <lastmod>2017-03-14T22:20:26-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/alumni_map/</loc>
+    <loc>whodat_a.netlify.com/post/acgme_work_hours/</loc>
+    <lastmod>2017-03-14T22:20:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>whodat_a.netlify.com/projects/alumni_map/</loc>
     <lastmod>2017-02-07T21:23:18-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/data/</loc>
+    <loc>whodat_a.netlify.com/tags/data/</loc>
     <lastmod>2017-02-03T22:21:56-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/post/foreign-physicians/</loc>
+    <loc>whodat_a.netlify.com/post/foreign-physicians/</loc>
     <lastmod>2017-02-03T22:21:56-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/tags/politics/</loc>
+    <loc>whodat_a.netlify.com/tags/politics/</loc>
     <lastmod>2017-02-03T22:21:56-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/fellowship-paths/</loc>
+    <loc>whodat_a.netlify.com/projects/fellowship-paths/</loc>
     <lastmod>2017-02-03T21:39:15-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/tags/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/tags/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/projects/example-external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/whodat_a.netlify.com/tags/design/</loc>
+    <loc>whodat_a.netlify.com/tags/design/</loc>
     <lastmod>2014-10-18T17:47:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/whodat_a.netlify.com/projects/nohig_logo/</loc>
+    <loc>whodat_a.netlify.com/projects/nohig_logo/</loc>
     <lastmod>2014-10-18T17:47:50-05:00</lastmod>
   </url>
   
