@@ -1,0 +1,11 @@
+name: tusom_alumni_map
+title: TUSOM Alumni Map
+account: jonnyc
+server: shinyapps.io
+appId: 154454
+bundleId: 698136
+url: https://jonnyc.shinyapps.io/tusom_alumni_map/
+when: 1486011172.10801
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: legend data.csv|Shiny App.R

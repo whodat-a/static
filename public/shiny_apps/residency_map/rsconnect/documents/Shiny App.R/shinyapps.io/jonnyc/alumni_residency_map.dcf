@@ -1,0 +1,11 @@
+name: alumni_residency_map
+title: Alumni Residency Map
+account: jonnyc
+server: shinyapps.io
+appId: 154446
+bundleId: 698113
+url: https://jonnyc.shinyapps.io/alumni_residency_map/
+when: 1486008361.83293
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: server.R|ui.R
