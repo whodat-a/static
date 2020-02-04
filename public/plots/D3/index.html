@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Fellowship Paths</title>
+<style>
+
+@import url(style.css);
+
+#circle circle {
+fill: none;
+pointer-events: all;
+}
+
+.group path {
+fill-opacity: .5;
+}
+
+path.chord {
+stroke: #000;
+stroke-width: .25px;
+}
+
+#circle:hover path.fade {
+display: none;
+}
+
+</style>
+
+<header>
+<aside>January 27th, 2017</aside>
+</header>
+
+<h1>The Different Paths to a Fellowship</h1>
+<h6>Made by <a href="http://whodat-a.github.io">WhoDat-a</a></h6>
+<br>
+
+<aside>Data is from <a href="http://www.nrmp.org/participating-fellowships/">NRMP Participating Fellowships</a>
+<br>
+<br>
+Mouseover to focus on residencies and fellowships. Hover over the chords to specify the path
+<br>
+<br>
+If you have any feedback, feel free to
+  <a href="mailto:WhoDat.a@outlook.com?Subject=Specialty%20Paths%20Feedback" target="_top">contact me</a>
+</aside>
+<script src="https://d3js.org/d3.v2.min.js?2.8.1"></script>
+<script>
+
+var width = 800,
+height = 800,
+outerRadius = Math.min(width, height) / 2 - 10,
+innerRadius = outerRadius - 180;
+
+var formatPercent = d3.format(".1%");
+
+var arc = d3.svg.arc()
+.innerRadius(innerRadius)
+.outerRadius(outerRadius);
+
+var layout = d3.layout.chord()
+.padding(.04)
+.sortSubgroups(d3.descending)
+.sortChords(d3.ascending);
+
+var path = d3.svg.chord()
+.radius(innerRadius);
+
+var svg = d3.select("body").append("svg")
+.attr("width", width)
+.attr("height", height)
+.append("g")
+.attr("id", "circle")
+.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+svg.append("circle")
+.attr("r", outerRadius);
+
+d3.csv("teams.csv", function(cities) {
+d3.json("matrix.json", function(matrix) {
+
+// Compute the chord layout.
+layout.matrix(matrix);
+
+// Add a group per neighborhood.
+var group = svg.selectAll(".group")
+.data(layout.groups)
+.enter().append("g")
+.attr("class", "group")
+.on("mouseover", mouseover);
+
+// Add a mouseover title.
+// group.append("title").text(function(d, i) {
+// return cities[i].name + ": " + formatPercent(d.value) + " of origins";
+// });
+
+// Add the group arc.
+var groupPath = group.append("path")
+.attr("id", function(d, i) { return "group" + i; })
+.attr("d", arc)
+.style("fill", function(d, i) { return cities[i].color; });
+
+// Add a text label.
+// var groupText = group.append("text")
+// .attr("x", 0)
+// .attr("dy", 5);
+
+group.append("text")
+  .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+  .attr("dy", ".35em")
+  .attr("transform", function(d) {
+    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+        + "translate(" + (innerRadius + 26) + ")"
+        + (d.angle > Math.PI ? "rotate(180)" : "");
+  })
+  .style("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
+  .text(function(d, i) { return cities[i].name; });
+
+// groupText.append("textPath")
+// .attr("xlink:href", function(d, i) { return "#group" + i; })
+// .text(function(d, i) { return cities[i].name; });
+
+// Remove the labels that don't fit. :(
+// groupText.filter(function(d, i) { return groupPath[0][i].getTotalLength() / 2 - 16 < this.getComputedTextLength(); })
+// .remove();
+
+// Add the chords.
+var chord = svg.selectAll(".chord")
+.data(layout.chords)
+.enter().append("path")
+.attr("class", "chord")
+.style("fill", function(d) { return cities[d.source.index].color; })
+.attr("d", path);
+
+// Add an elaborate mouseover title for each chord.
+ chord.append("title").text(function(d) {
+ return cities[d.source.index].name
+ + " → " + cities[d.target.index].name;
+ });
+
+function mouseover(d, i) {
+chord.classed("fade", function(p) {
+return p.source.index != i
+&& p.target.index != i;
+});
+}
+});
+});
+
+</script>
+
+
+<footer>
+<p>Built with <a href="http://d3js.org/">d3.js</a>.</p>
+<p>Modified from Mike Bostock's <a href="http://bost.ocks.org/mike/uberdata/">Uber Rides by Neighborhood</a> and
+  Andrew RP's <a href="http://bl.ocks.org/AndrewRP">Chord Diagram Example</a></p>
+<aside>Shameless plug? Want more? <a href="http://whodat-a.github.io">See what else I've been up to</a> or <a href="https://twitter.com/whodat_a">what I've been yelling about</a></aside>
+</footer>
