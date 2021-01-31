@@ -1,0 +1,11 @@
+name: shiny_app
+title:
+account: jonnyc
+server: shinyapps.io
+appId: 154030
+bundleId: 698135
+url: https://jonnyc.shinyapps.io/shiny_app/
+when: 1486011080.58329
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: legend data.csv|Shiny App.R

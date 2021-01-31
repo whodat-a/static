@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on Some Musings</title>
+    <link>https://whodat-a.github.io/site/tags/visualization/</link>
+    <description>Recent content in Visualization on Some Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 01 Jun 2017 20:27:04 -0500</lastBuildDate><atom:link href="https://whodat-a.github.io/site/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H1B visa holding Physicians</title>
+      <link>https://whodat-a.github.io/site/projects/h1b_cartogram/</link>
+      <pubDate>Thu, 01 Jun 2017 20:27:04 -0500</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/projects/h1b_cartogram/</guid>
+      <description>Based off a &lt;a href=&#34;http://jamanetwork.com/journals/jama/fullarticle/2620160&#34;&gt;JAMA Research Letter&amp;rsquo;s&lt;/a&gt; table of number and percent of active physicians holding H1B visas, I thought this this would make for an interesting visual representation.</description>
+    </item>
+    
+    <item>
+      <title>Making a Cartogram with R (and some outside help)</title>
+      <link>https://whodat-a.github.io/site/post/making_cartogram/</link>
+      <pubDate>Thu, 01 Jun 2017 20:15:43 -0500</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/post/making_cartogram/</guid>
+      <description>#Respect Much of this tutorial could not have been accomplished without Frank Hecker&amp;rsquo;s Blog including a key function to create a dataframe from the shapefiles.
+Some Background In April, Peter Kahn and Tova Gardin published a Research Letter in the Journal of the American Medical Association (JAMA). The article includes a table of number and percent of active physicians holding H1B visas. A few things surprised me in the map.</description>
+    </item>
+    
+    <item>
+      <title>Tulane School of Medicine Alumni Map</title>
+      <link>https://whodat-a.github.io/site/projects/alumni_map/</link>
+      <pubDate>Tue, 07 Feb 2017 21:23:18 -0600</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/projects/alumni_map/</guid>
+      <description>A few years ago, Tulane provided us with a &lt;a href=&#34;https://www.google.com/maps/d/u/0/viewer?mid=1AwGPAhlNgdtiVTwrO49VhXKxrEI&amp;amp;ll=36.3227501547167%2C-96.25223873124997&amp;amp;z=5&#34;&gt;map of recent Tulane Alumni and their residencies&lt;/a&gt;. I wanted to improve upon the map and also learn some &lt;!-- raw HTML omitted --&gt;R&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;Leaflet&lt;!-- raw HTML omitted --&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Immigration bans and Physicians</title>
+      <link>https://whodat-a.github.io/site/post/foreign-physicians/</link>
+      <pubDate>Fri, 03 Feb 2017 22:21:56 -0600</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/post/foreign-physicians/</guid>
+      <description>My first day on my Surgery rotation was a whirlwind, filled with excitement at to be part of a surgery and have an idea about what is going on and the fear of getting pimped and not knowing the answer; but, honestly, my biggest fear was somehow managing to contaminate the field. Somehow I misread the numbers on the OR and went into the wrong room as a case was starting.</description>
+    </item>
+    
+    <item>
+      <title>The Different Paths to a Fellowship</title>
+      <link>https://whodat-a.github.io/site/projects/fellowship-paths/</link>
+      <pubDate>Fri, 03 Feb 2017 21:39:15 -0600</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/projects/fellowship-paths/</guid>
+      <description>A while ago on &lt;a href=&#34;https://reddit.com/r/medicine&#34;&gt;r/medicine&lt;/a&gt; someone asked if there was a mapping of different fellowship paths.</description>
+    </item>
+    
+    <item>
+      <title>Specialty Paths</title>
+      <link>https://whodat-a.github.io/site/projects/specialty-paths/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://whodat-a.github.io/site/projects/specialty-paths/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
