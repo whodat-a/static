@@ -10,8 +10,6 @@
 <meta itemprop="name" content="Making a Cartogram with R (and some outside help)">
 <meta itemprop="description" content="#Respect Much of this tutorial could not have been accomplished without Frank Hecker&rsquo;s Blog including a key function to create a dataframe from the shapefiles.
 Some Background In April, Peter Kahn and Tova Gardin published a Research Letter in the Journal of the American Medical Association (JAMA). The article includes a table of number and percent of active physicians holding H1B visas. A few things surprised me in the map.">
-
-
 <meta itemprop="datePublished" content="2017-06-01T20:15:43-05:00" />
 <meta itemprop="dateModified" content="2017-06-01T20:15:43-05:00" />
 <meta itemprop="wordCount" content="1614">
@@ -23,7 +21,7 @@ Some Background In April, Peter Kahn and Tova Gardin published a Research Letter
 <meta property="og:description" content="#Respect Much of this tutorial could not have been accomplished without Frank Hecker&rsquo;s Blog including a key function to create a dataframe from the shapefiles.
 Some Background In April, Peter Kahn and Tova Gardin published a Research Letter in the Journal of the American Medical Association (JAMA). The article includes a table of number and percent of active physicians holding H1B visas. A few things surprised me in the map." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/making_cartogram/" />
+<meta property="og:url" content="https://whodat-a.netlify.com/post/making_cartogram/" />
 <meta property="article:published_time" content="2017-06-01T20:15:43-05:00" />
 <meta property="article:modified_time" content="2017-06-01T20:15:43-05:00" />
 <meta name="twitter:card" content="summary"/>
@@ -39,7 +37,7 @@ Some Background In April, Peter Kahn and Tova Gardin published a Research Letter
 	<link rel="shortcut icon" href="/favicon.ico">
 
 	<title>Making a Cartogram with R (and some outside help)</title>
-	<link rel="stylesheet" href="/css/style.min.20e6e5df1f989a2a36ed7cbce604b2672cfea0e8acef9930825ffb5f85914012.css" integrity="sha256-IObl3x+Ymio27Xy85gSyZyz+oOis75kwgl/7X4WRQBI=" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://whodat-a.netlify.com/css/style.min.657bcb7af31123e4156b1a3d2ff60a636717e54ead74f882136b5114cf72b55e.css" integrity="sha256-ZXvLevMRI+QVaxo9L/YKY2cX5U6tdPiCE2tRFM9ytV4=" crossorigin="anonymous">
 	
 </head>
 
@@ -49,12 +47,12 @@ Some Background In April, Peter Kahn and Tova Gardin published a Research Letter
 		<div class="hdr-wrapper section-inner">
 			<div class="hdr-left">
 				<div class="site-branding">
-					<a href="/"></a>
+					<a href="https://whodat-a.netlify.com/"></a>
 				</div>
 				<nav class="site-nav hide-in-mobile">
 					
-				<a href="/post/">Posts</a>
-				<a href="/projects/">Projects</a>
+				<a href="https://whodat-a.netlify.com/post/">Posts</a>
+				<a href="https://whodat-a.netlify.com/projects/">Projects</a>
 				<a href="https://www.alltrails.com/">Free Time</a>
 
 				</nav>
@@ -66,8 +64,8 @@ Some Background In April, Peter Kahn and Tova Gardin published a Research Letter
 	</header>
 	<div id="mobile-menu" class="animated fast">
 		<ul>
-			<li><a href="/post/">Posts</a></li>
-			<li><a href="/projects/">Projects</a></li>
+			<li><a href="https://whodat-a.netlify.com/post/">Posts</a></li>
+			<li><a href="https://whodat-a.netlify.com/projects/">Projects</a></li>
 			<li><a href="https://www.alltrails.com/">Free Time</a></li>
 		</ul>
 	</div>
@@ -76,64 +74,46 @@ Some Background In April, Peter Kahn and Tova Gardin published a Research Letter
 	<main class="site-main section-inner thin animated fadeIn faster">
 		<h1>Making a Cartogram with R (and some outside help)</h1>
 		<div class="content">
-			
-
-<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-1-1.png" alt="" /><!-- --></p>
-
+			<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-1-1.png" alt=""><!-- raw HTML omitted --></p>
 <h1 id="respect">#Respect<a href="#respect" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
-
 <p>Much of this tutorial could not have been accomplished without <a href="https://rpubs.com/frankhecker/64539">Frank Hecker&rsquo;s Blog</a> including a key function to create a dataframe from the shapefiles.</p>
-
 <h2 id="some-background">Some Background<a href="#some-background" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-
 <p>In April, Peter Kahn and Tova Gardin published a <a href="http://jamanetwork.com/journals/jama/fullarticle/2620160">Research Letter in the Journal of the American Medical Association (JAMA)</a>. The article includes a table of number and percent of active physicians holding H1B visas. A few things surprised me in the map.</p>
-
 <p>When I saw the data, I thought it would make an interesting <a href="https://www.wikiwand.com/en/Cartogram">cartogram</a>, a type of map that weighs the geographic area by the data instead of land mass. The result is what you see above.</p>
-
 <p>R has some powerful tools for standard mapping, but drawing a cartogram takes a little more effort and, to make things simpler, an outside program, called <a href="scapetoad.choros.ch">ScapeToad</a></p>
-
 <h2 id="packages-and-shape-files">Packages and shape files<a href="#packages-and-shape-files" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-
 <p>The packages I used to prepare the cartogram are the <code>sp</code>, <code>rgdal</code>, and <code>dplyr</code> packages. To get the shapefile for the United States, I just googled around. I had issues with the Census shapefile projection so I used one from <a href="https://www.arcgis.com/home/item.html?id=f7f805eb65eb4ab787a0a3e1116ca7e5">ArcGIS</a></p>
-
 <p>I use <code>rgdal::readOGR</code> to read the shapefile.</p>
-
 <h2 id="sanity-checks">Sanity checks<a href="#sanity-checks" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-
 <p>I plot the shapefile just to make sure that the projection passes the eye test.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">plot<span class="p">(</span>states.map<span class="p">)</span></code></pre></div>
-<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-2-1.png" alt="" /><!-- --></p>
-
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">plot</span><span class="p">(</span><span class="n">states.map</span><span class="p">)</span>
+</code></pre></div><p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-2-1.png" alt=""><!-- raw HTML omitted --></p>
 <p>Next I take a look at the data from the shapefile</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">str<span class="p">(</span>states.map<span class="o">@</span>data<span class="p">)</span></code></pre></div>
-<pre><code>## 'data.frame':	51 obs. of  5 variables:
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">str</span><span class="p">(</span><span class="n">states.map</span><span class="o">@</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div><pre><code>## 'data.frame':	51 obs. of  5 variables:
 ##  $ STATE_NAME: Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
 ##  $ DRAWSEQ   : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ STATE_FIPS: Factor w/ 51 levels &quot;01&quot;,&quot;02&quot;,&quot;04&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
 ##  $ SUB_REGION: Factor w/ 9 levels &quot;East North Central&quot;,..: 6 6 4 5 8 8 4 1 4 5 ...
 ##  $ STATE_ABBR: Factor w/ 51 levels &quot;AK&quot;,&quot;AL&quot;,&quot;AR&quot;,..: 12 48 27 22 29 42 51 49 14 47 ...
-</code></pre>
-
-<p>Next I read in the data of the H1B visa holders and take a look at the structue</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">h1b <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#34;H1B.csv&#34;</span><span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
-str<span class="p">(</span>h1b<span class="p">)</span></code></pre></div>
-<pre><code>## 'data.frame':	50 obs. of  5 variables:
+</code></pre><p>Next I read in the data of the H1B visa holders and take a look at the structue</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">h1b</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#34;H1B.csv&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">h1b</span><span class="p">)</span>
+</code></pre></div><pre><code>## 'data.frame':	50 obs. of  5 variables:
 ##  $ State                         : chr  &quot;New York&quot; &quot;Michigan&quot; &quot;Illinois&quot; &quot;Ohio&quot; ...
 ##  $ Number.of.Physician.LCAs      : int  1467 945 826 606 602 545 343 309 244 242 ...
 ##  $ Percent.of.Physician.LCAs     : num  13.98 9.01 7.87 5.78 5.74 ...
 ##  $ Active.Patient.Care.Physicans : int  58000 23987 30223 28097 34057 23574 51430 90159 13571 10531 ...
 ##  $ Percent.Patient.Care.Physicans: num  2.5 3.94 2.73 2.16 1.77 2.31 0.67 0.34 1.8 2.3 ...
-</code></pre>
-
-<p>By looking at the structure, I notice that in the <code>h1b</code> dataset, the State names are the column &ldquo;State&rdquo; while the <code>states.map</code> data has the State names under the &ldquo;STATE_NAME&rdquo; column. So I change the column names to &ldquo;NAME&rdquo; to match one another.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">colnames</span><span class="p">(</span>h1b<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;NAME&#34;</span><span class="p">)</span>
-<span class="kp">names</span><span class="p">(</span>states.map<span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;NAME&#34;</span><span class="p">)</span></code></pre></div>
-<p>Next I join the <code>h1b</code> data to the <code>states.map</code> using <code>ddplr::left_join</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">states.map<span class="o">@</span>data <span class="o">&lt;-</span> states.map<span class="o">@</span>data <span class="o">%&gt;%</span>
-  left_join<span class="p">(</span>h1b<span class="p">,</span> by <span class="o">=</span> <span class="s">&#34;NAME&#34;</span><span class="p">)</span></code></pre></div>
-<p>One last sanity check and when that checks out, I write the file to an ESRI shapefile that can be read by ScapeToad</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">str<span class="p">(</span>states.map<span class="o">@</span>data<span class="p">)</span></code></pre></div>
-<pre><code>## 'data.frame':	51 obs. of  9 variables:
+</code></pre><p>By looking at the structure, I notice that in the <code>h1b</code> dataset, the State names are the column &ldquo;State&rdquo; while the <code>states.map</code> data has the State names under the &ldquo;STATE_NAME&rdquo; column. So I change the column names to &ldquo;NAME&rdquo; to match one another.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">colnames</span><span class="p">(</span><span class="n">h1b</span><span class="p">)</span><span class="n">[1]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;NAME&#34;</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">states.map</span><span class="p">)</span><span class="n">[1]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;NAME&#34;</span><span class="p">)</span>
+</code></pre></div><p>Next I join the <code>h1b</code> data to the <code>states.map</code> using <code>ddplr::left_join</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">states.map</span><span class="o">@</span><span class="n">data</span> <span class="o">&lt;-</span> <span class="n">states.map</span><span class="o">@</span><span class="n">data</span> <span class="o">%&gt;%</span>
+  <span class="nf">left_join</span><span class="p">(</span><span class="n">h1b</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;NAME&#34;</span><span class="p">)</span>
+</code></pre></div><p>One last sanity check and when that checks out, I write the file to an ESRI shapefile that can be read by ScapeToad</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">str</span><span class="p">(</span><span class="n">states.map</span><span class="o">@</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div><pre><code>## 'data.frame':	51 obs. of  9 variables:
 ##  $ NAME                          : chr  &quot;Hawaii&quot; &quot;Washington&quot; &quot;Montana&quot; &quot;Maine&quot; ...
 ##  $ DRAWSEQ                       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ STATE_FIPS                    : Factor w/ 51 levels &quot;01&quot;,&quot;02&quot;,&quot;04&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
@@ -143,44 +123,31 @@ str<span class="p">(</span>h1b<span class="p">)</span></code></pre></div>
 ##  $ Percent.of.Physician.LCAs     : num  NA 1.8 0.17 0.82 0.71 0.35 0.16 1.75 0 0.14 ...
 ##  $ Active.Patient.Care.Physicans : int  NA 16884 227 389 162 180 114 13462 0 187 ...
 ##  $ Percent.Patient.Care.Physicans: num  NA 1.12 0.81 2.22 4.68 2.02 1.54 1.37 0 0.8 ...
-</code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">writeOGR<span class="p">(</span>states.map<span class="p">,</span>
-         dsn <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">,</span>
-         layer <span class="o">=</span> <span class="s">&#34;states&#34;</span><span class="p">,</span>
-         driver <span class="o">=</span> <span class="s">&#34;ESRI Shapefile&#34;</span><span class="p">,</span>
-         overwrite_layer <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span></code></pre></div>
-<p>Getting ScapeToad to work on my mac took some trial and error and I was only able to get it to work using the JRE. Here are the steps I used to get it to run:</p>
-
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">writeOGR</span><span class="p">(</span><span class="n">states.map</span><span class="p">,</span>
+         <span class="n">dsn</span> <span class="o">=</span> <span class="s">&#34;.&#34;</span><span class="p">,</span>
+         <span class="n">layer</span> <span class="o">=</span> <span class="s">&#34;states&#34;</span><span class="p">,</span>
+         <span class="n">driver</span> <span class="o">=</span> <span class="s">&#34;ESRI Shapefile&#34;</span><span class="p">,</span>
+         <span class="n">overwrite_layer</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</code></pre></div><p>Getting ScapeToad to work on my mac took some trial and error and I was only able to get it to work using the JRE. Here are the steps I used to get it to run:</p>
 <ol>
 <li><a href="https://scapetoad.choros.ch/download.php">Download ScapeToad.jar</a></li>
 <li>Make sure you have the necessary version of JRE</li>
 <li>Via the terminal, run <code>java -Xmx512m -jar wherever/scapetoad.jar/is/located/</code>. For me this was: <code>java -Xmx512m -jar ~/Downloads/ScapToad-v11/ScapeToad.jar</code></li>
 </ol>
-
 <p>Once ScapeToad opens, it&rsquo;s pretty self explanatory. You upload the shapefile and tell it which variable will be the basis of the cartogram. For a more in-depth explanation of ScapeToad (with images) see <a href="http://gis.yohman.com/blog/2011/11/07/tutorial-building-cartograms/">this post</a></p>
-
 <p>Now that we exported the shape file from ScapeToad, it&rsquo;s time to go back to R:</p>
-
 <pre><code>## [1] TRUE
-</code></pre>
-
-<pre><code>## OGR data source with driver: ESRI Shapefile
+</code></pre><pre><code>## OGR data source with driver: ESRI Shapefile
 ## Source: &quot;.&quot;, layer: &quot;states_cart&quot;
 ## with 51 features
 ## It has 11 fields
 ## Integer64 fields read as strings:  DRAWSEQ N__P_LC A_P_C_P
-</code></pre>
-
-<pre><code>## OGR data source with driver: ESRI Shapefile
+</code></pre><pre><code>## OGR data source with driver: ESRI Shapefile
 ## Source: &quot;states_21basic/&quot;, layer: &quot;states&quot;
 ## with 51 features
 ## It has 5 fields
-</code></pre>
-
-<p>I ran into a problem in the following step with the <code>convert_map</code> function so after a bit of googling, I found <a href="https://stackoverflow.com/questions/30790036/error-istruegpclibpermitstatus-is-not-true">this StackOverflow question</a> That had the <code>if (!require(gpclib)) install.packages(&quot;gpclib&quot;, type=&quot;source&quot;)</code> fix.</p>
-
+</code></pre><p>I ran into a problem in the following step with the <code>convert_map</code> function so after a bit of googling, I found <a href="https://stackoverflow.com/questions/30790036/error-istruegpclibpermitstatus-is-not-true">this StackOverflow question</a> That had the <code>if (!require(gpclib)) install.packages(&quot;gpclib&quot;, type=&quot;source&quot;)</code> fix.</p>
 <p>I&rsquo;m always checking what the data looks like so&hellip;</p>
-
 <pre><code>## 'data.frame':	51 obs. of  11 variables:
 ##  $ NAME       : Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
 ##  $ DRAWSEQ    : Factor w/ 51 levels &quot;1&quot;,&quot;10&quot;,&quot;11&quot;,..: 1 12 23 34 45 48 49 50 51 2 ...
@@ -193,114 +160,102 @@ str<span class="p">(</span>h1b<span class="p">)</span></code></pre></div>
 ##  $ P_P_C_P    : num  NaN 1.12 0.81 2.22 4.68 2.02 1.54 1.37 0 0.8 ...
 ##  $ P__P_LCDens: num  0 0.08674 0.00377 0.08568 0.03246 ...
 ##  $ SizeError  : num  0 103.4 49.7 97.6 88.7 ...
-</code></pre>
-
-<pre><code>## 'data.frame':	51 obs. of  5 variables:
+</code></pre><pre><code>## 'data.frame':	51 obs. of  5 variables:
 ##  $ STATE_NAME: Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
 ##  $ DRAWSEQ   : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ STATE_FIPS: Factor w/ 51 levels &quot;01&quot;,&quot;02&quot;,&quot;04&quot;,..: 12 48 27 20 35 42 51 50 13 46 ...
 ##  $ SUB_REGION: Factor w/ 9 levels &quot;East North Central&quot;,..: 6 6 4 5 8 8 4 1 4 5 ...
 ##  $ STATE_ABBR: Factor w/ 51 levels &quot;AK&quot;,&quot;AL&quot;,&quot;AR&quot;,..: 12 48 27 22 29 42 51 49 14 47 ...
-</code></pre>
-
-<p>I also wanted to make sure the import of the shapefile worked:</p>
-
-<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-10-1.png" alt="" /><!-- --><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-10-2.png" alt="" /><!-- --></p>
-
+</code></pre><p>I also wanted to make sure the import of the shapefile worked:</p>
+<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-10-1.png" alt=""><!-- raw HTML omitted --><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-10-2.png" alt=""><!-- raw HTML omitted --></p>
 <p>I was also getting some weird projections because I&rsquo;m pretty sure my original US shapefule included Minor Outlying Territories.</p>
-
 <pre><code>##  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ## [15] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ## [29] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ## [43] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
-</code></pre>
+</code></pre><p>This is the <code>convert_map</code> function I mentioned above. I found this function while trying to figure out how to make a cartogram from <a href="https://rpubs.com/frankhecker/64539">Frank Hecker&rsquo;s Blog</a> that converts the spacial data into a dataframe.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">convert_map</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">map</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">temp_map</span> <span class="o">&lt;-</span> <span class="n">map</span>  <span class="c1"># Avoid modifying original map in the next step</span>
+  <span class="n">temp_map</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">id</span> <span class="o">&lt;-</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">temp_map</span><span class="o">@</span><span class="n">data</span><span class="p">)</span>
+  <span class="n">points</span> <span class="o">&lt;-</span> <span class="nf">fortify</span><span class="p">(</span><span class="n">temp_map</span><span class="p">,</span> <span class="n">region</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+  <span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">full_join</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">temp_map</span><span class="o">@</span><span class="n">data</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+  <span class="nf">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><p>The rest of my steps really match <a href="https://rpubs.com/frankhecker/64539">Mr. Hecker&rsquo;s steps</a>: I convert both maps to a dataframe. Then I center the labels based on Frank&rsquo;s steps.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">unmod_df</span> <span class="o">&lt;-</span> <span class="nf">convert_map</span><span class="p">(</span><span class="n">states.map</span><span class="p">)</span>
 
-<p>This is the <code>convert_map</code> function I mentioned above. I found this function while trying to figure out how to make a cartogram from <a href="https://rpubs.com/frankhecker/64539">Frank Hecker&rsquo;s Blog</a> that converts the spacial data into a dataframe.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">convert_map <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>map<span class="p">)</span> <span class="p">{</span>
-  temp_map <span class="o">&lt;-</span> map  <span class="c1"># Avoid modifying original map in the next step</span>
-  temp_map<span class="o">@</span>data<span class="o">$</span>id <span class="o">&lt;-</span> <span class="kp">rownames</span><span class="p">(</span>temp_map<span class="o">@</span>data<span class="p">)</span>
-  points <span class="o">&lt;-</span> fortify<span class="p">(</span>temp_map<span class="p">,</span> region <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
-  df <span class="o">&lt;-</span> full_join<span class="p">(</span>points<span class="p">,</span> temp_map<span class="o">@</span>data<span class="p">,</span> by <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
-  <span class="kr">return</span><span class="p">(</span>df<span class="p">)</span>
-<span class="p">}</span></code></pre></div>
-<p>The rest of my steps really match <a href="https://rpubs.com/frankhecker/64539">Mr. Hecker&rsquo;s steps</a>: I convert both maps to a dataframe. Then I center the labels based on Frank&rsquo;s steps.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">unmod_df <span class="o">&lt;-</span> convert_map<span class="p">(</span>states.map<span class="p">)</span>
+<span class="n">h1bcg</span> <span class="o">&lt;-</span> <span class="nf">gBuffer</span><span class="p">(</span><span class="n">h1bcg</span><span class="p">,</span> <span class="n">byid</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+<span class="n">cg_df</span> <span class="o">&lt;-</span> <span class="nf">convert_map</span><span class="p">(</span><span class="n">h1bcg</span><span class="p">)</span>
 
-h1bcg <span class="o">&lt;-</span> gBuffer<span class="p">(</span>h1bcg<span class="p">,</span> byid <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> width <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
-cg_df <span class="o">&lt;-</span> convert_map<span class="p">(</span>h1bcg<span class="p">)</span>
+<span class="n">unmodified_centers</span> <span class="o">=</span> <span class="nf">coordinates</span><span class="p">(</span><span class="n">states.map</span><span class="p">)</span>
+<span class="n">unmodified_centers_df</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">unmodified_centers</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">unmodified_centers_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;long&#34;</span><span class="p">,</span> <span class="s">&#34;lat&#34;</span><span class="p">)</span>
+<span class="n">unmodified_centers_df</span><span class="o">$</span><span class="n">NAME</span> <span class="o">=</span> <span class="nf">as.character</span><span class="p">(</span><span class="n">states.map</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">STATE_NAME</span><span class="p">)</span>
 
-unmodified_centers <span class="o">=</span> coordinates<span class="p">(</span>states.map<span class="p">)</span>
-unmodified_centers_df <span class="o">&lt;-</span> <span class="kp">as.data.frame</span><span class="p">(</span>unmodified_centers<span class="p">)</span>
-<span class="kp">names</span><span class="p">(</span>unmodified_centers_df<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;long&#34;</span><span class="p">,</span> <span class="s">&#34;lat&#34;</span><span class="p">)</span>
-unmodified_centers_df<span class="o">$</span>NAME <span class="o">=</span> <span class="kp">as.character</span><span class="p">(</span>states.map<span class="o">@</span>data<span class="o">$</span>STATE_NAME<span class="p">)</span>
-
-h1bcg_centers <span class="o">=</span> coordinates<span class="p">(</span>h1bcg<span class="p">)</span>
-h1bcg_df <span class="o">&lt;-</span> <span class="kp">as.data.frame</span><span class="p">(</span>h1bcg_centers<span class="p">)</span>
-<span class="kp">names</span><span class="p">(</span>h1bcg_df<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;long&#34;</span><span class="p">,</span> <span class="s">&#34;lat&#34;</span><span class="p">)</span>
-h1bcg_df<span class="o">$</span>NAME <span class="o">=</span> <span class="kp">as.character</span><span class="p">(</span>h1bcg<span class="o">@</span>data<span class="o">$</span>NAME<span class="p">)</span></code></pre></div>
-<p>Last is the plotting, which is what we all wanted to do anyway:</p>
-
+<span class="n">h1bcg_centers</span> <span class="o">=</span> <span class="nf">coordinates</span><span class="p">(</span><span class="n">h1bcg</span><span class="p">)</span>
+<span class="n">h1bcg_df</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">h1bcg_centers</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">h1bcg_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;long&#34;</span><span class="p">,</span> <span class="s">&#34;lat&#34;</span><span class="p">)</span>
+<span class="n">h1bcg_df</span><span class="o">$</span><span class="n">NAME</span> <span class="o">=</span> <span class="nf">as.character</span><span class="p">(</span><span class="n">h1bcg</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">NAME</span><span class="p">)</span>
+</code></pre></div><p>Last is the plotting, which is what we all wanted to do anyway:</p>
 <ul>
 <li>I plot the unmodified state map, outlined in gray.</li>
 <li>Plot the labels for the states in black</li>
 <li>Use <code>coord_equal()</code> to force the x and y coordinate scales, avoiding further distortion</li>
-
-<li><p>Remove all extraneous plot elements, leaving only the map itself.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">g <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span>
-geom_polygon<span class="p">(</span>data <span class="o">=</span> unmod_df<span class="p">,</span>
-           aes<span class="p">(</span>x <span class="o">=</span> long<span class="p">,</span> y <span class="o">=</span> lat<span class="p">,</span> group <span class="o">=</span> group<span class="p">),</span>
-           fill <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
-           colour <span class="o">=</span> <span class="s">&#34;grey&#34;</span><span class="p">)</span> <span class="o">+</span>
-geom_text<span class="p">(</span>data <span class="o">=</span> unmodified_centers_df<span class="p">,</span>
-        aes<span class="p">(</span>x <span class="o">=</span> long<span class="p">,</span> y <span class="o">=</span> lat<span class="p">,</span> label <span class="o">=</span> NAME<span class="p">),</span>
-        size <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
-        colour <span class="o">=</span> <span class="s">&#34;black&#34;</span><span class="p">,</span>
-        show.legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
-coord_equal<span class="p">()</span> <span class="o">+</span>
-theme<span class="p">(</span>axis.title <span class="o">=</span> element_blank<span class="p">(),</span>
-    axis.text <span class="o">=</span> element_blank<span class="p">(),</span>
-    axis.ticks <span class="o">=</span> element_blank<span class="p">(),</span>
-    panel.grid.major <span class="o">=</span> element_blank<span class="p">(),</span>
-    panel.grid.minor <span class="o">=</span> element_blank<span class="p">(),</span>
-    panel.background <span class="o">=</span> element_blank<span class="p">())</span>
-<span class="kp">print</span><span class="p">(</span>g<span class="p">)</span></code></pre></div></li>
+<li>Remove all extraneous plot elements, leaving only the map itself.</li>
 </ul>
-
-<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-14-1.png" alt="" /><!-- --></p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">g <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span>
-  geom_polygon<span class="p">(</span>data <span class="o">=</span> cg_df<span class="p">,</span>
-               aes<span class="p">(</span>x <span class="o">=</span> long<span class="p">,</span> y <span class="o">=</span> lat<span class="p">,</span> group <span class="o">=</span> group<span class="p">),</span>
-               fill <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
-               colour <span class="o">=</span> <span class="s">&#34;grey&#34;</span><span class="p">)</span> <span class="o">+</span>
-  geom_text<span class="p">(</span>data <span class="o">=</span> h1bcg_df<span class="p">,</span>
-            aes<span class="p">(</span>x <span class="o">=</span> long<span class="p">,</span> y <span class="o">=</span> lat<span class="p">,</span> label <span class="o">=</span> NAME<span class="p">),</span>
-            size <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
-            colour <span class="o">=</span> <span class="s">&#34;black&#34;</span><span class="p">,</span>
-            show.legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
-  coord_equal<span class="p">()</span> <span class="o">+</span>
-  ggtitle<span class="p">(</span><span class="s">&#34;Cartogram: Percentage of Practicing Physicians holding H1b visa&#34;</span><span class="p">)</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.title <span class="o">=</span> element_blank<span class="p">(),</span>
-        axis.text <span class="o">=</span> element_blank<span class="p">(),</span>
-        axis.ticks <span class="o">=</span> element_blank<span class="p">(),</span>
-        panel.grid.major <span class="o">=</span> element_blank<span class="p">(),</span>
-        panel.grid.minor <span class="o">=</span> element_blank<span class="p">(),</span>
-        panel.background <span class="o">=</span> element_blank<span class="p">())</span>
-<span class="kp">print</span><span class="p">(</span>g<span class="p">)</span></code></pre></div>
-<p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-14-2.png" alt="" /><!-- --></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">g</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_polygon</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">unmod_df</span><span class="p">,</span>
+               <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">long</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lat</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">),</span>
+               <span class="n">fill</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
+               <span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;grey&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_text</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">unmodified_centers_df</span><span class="p">,</span>
+            <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">long</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lat</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">NAME</span><span class="p">),</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+            <span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;black&#34;</span><span class="p">,</span>
+            <span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_equal</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.title</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">axis.text</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">axis.ticks</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.grid.major</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.grid.minor</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</code></pre></div><p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-14-1.png" alt=""><!-- raw HTML omitted --></p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">g</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_polygon</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">cg_df</span><span class="p">,</span>
+               <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">long</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lat</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="p">),</span>
+               <span class="n">fill</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
+               <span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;grey&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_text</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">h1bcg_df</span><span class="p">,</span>
+            <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">long</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lat</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">NAME</span><span class="p">),</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+            <span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;black&#34;</span><span class="p">,</span>
+            <span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_equal</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#34;Cartogram: Percentage of Practicing Physicians holding H1b visa&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.title</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">axis.text</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">axis.ticks</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.grid.major</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.grid.minor</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>
+        <span class="n">panel.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</code></pre></div><p><img src="/img/H1B_Cartogram_files/figure-html/unnamed-chunk-14-2.png" alt=""><!-- raw HTML omitted --></p>
 
 		</div>
 	</main>
 
 	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2020 <a href="/">whodat-a</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>&copy; 2021 <a href="https://whodat-a.netlify.com/">whodat-a</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
 		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://whodat-a.netlify.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
 		</p>
 	</footer>
 
 
 
-	<script src="/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	<script src="https://whodat-a.netlify.com/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
 	
 
 </body>

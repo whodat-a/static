@@ -1,59 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on </title>
-    <link>/projects/</link>
+    <link>https://whodat-a.netlify.com/projects/</link>
     <description>Recent content in Projects on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 01 Jun 2017 20:27:04 -0500</lastBuildDate>
-    
-	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Jun 2017 20:27:04 -0500</lastBuildDate><atom:link href="https://whodat-a.netlify.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>H1B visa holding Physicians</title>
-      <link>/projects/h1b_cartogram/</link>
+      <link>https://whodat-a.netlify.com/projects/h1b_cartogram/</link>
       <pubDate>Thu, 01 Jun 2017 20:27:04 -0500</pubDate>
       
-      <guid>/projects/h1b_cartogram/</guid>
+      <guid>https://whodat-a.netlify.com/projects/h1b_cartogram/</guid>
       <description>Based off a &lt;a href=&#34;http://jamanetwork.com/journals/jama/fullarticle/2620160&#34;&gt;JAMA Research Letter&amp;rsquo;s&lt;/a&gt; table of number and percent of active physicians holding H1B visas, I thought this this would make for an interesting visual representation.</description>
     </item>
     
     <item>
       <title>Tulane School of Medicine Alumni Map</title>
-      <link>/projects/alumni_map/</link>
+      <link>https://whodat-a.netlify.com/projects/alumni_map/</link>
       <pubDate>Tue, 07 Feb 2017 21:23:18 -0600</pubDate>
       
-      <guid>/projects/alumni_map/</guid>
-      <description>A few years ago, Tulane provided us with a &lt;a href=&#34;https://www.google.com/maps/d/u/0/viewer?mid=1AwGPAhlNgdtiVTwrO49VhXKxrEI&amp;amp;ll=36.3227501547167%2C-96.25223873124997&amp;amp;z=5&#34;&gt;map of recent Tulane Alumni and their residencies&lt;/a&gt;. I wanted to improve upon the map and also learn some &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;Leaflet&lt;/code&gt;.</description>
+      <guid>https://whodat-a.netlify.com/projects/alumni_map/</guid>
+      <description>A few years ago, Tulane provided us with a &lt;a href=&#34;https://www.google.com/maps/d/u/0/viewer?mid=1AwGPAhlNgdtiVTwrO49VhXKxrEI&amp;amp;ll=36.3227501547167%2C-96.25223873124997&amp;amp;z=5&#34;&gt;map of recent Tulane Alumni and their residencies&lt;/a&gt;. I wanted to improve upon the map and also learn some &lt;!-- raw HTML omitted --&gt;R&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;Leaflet&lt;!-- raw HTML omitted --&gt;.</description>
     </item>
     
     <item>
       <title>The Different Paths to a Fellowship</title>
-      <link>/projects/fellowship-paths/</link>
+      <link>https://whodat-a.netlify.com/projects/fellowship-paths/</link>
       <pubDate>Fri, 03 Feb 2017 21:39:15 -0600</pubDate>
       
-      <guid>/projects/fellowship-paths/</guid>
+      <guid>https://whodat-a.netlify.com/projects/fellowship-paths/</guid>
       <description>A while ago on &lt;a href=&#34;https://reddit.com/r/medicine&#34;&gt;r/medicine&lt;/a&gt; someone asked if there was a mapping of different fellowship paths.</description>
     </item>
     
     <item>
       <title>Specialty Paths</title>
-      <link>/projects/specialty-paths/</link>
+      <link>https://whodat-a.netlify.com/projects/specialty-paths/</link>
       <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/projects/specialty-paths/</guid>
-      <description> </description>
+      <guid>https://whodat-a.netlify.com/projects/specialty-paths/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>New Orleans Healthcare Improvement Group Logo</title>
-      <link>/projects/nohig_logo/</link>
+      <link>https://whodat-a.netlify.com/projects/nohig_logo/</link>
       <pubDate>Sat, 18 Oct 2014 17:47:50 -0500</pubDate>
       
-      <guid>/projects/nohig_logo/</guid>
+      <guid>https://whodat-a.netlify.com/projects/nohig_logo/</guid>
       <description>The New Orleans Healthcare Improvement Group (NOHIG) previously did not have a design so I started working on some ideas.</description>
     </item>
     

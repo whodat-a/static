@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Politics on </title>
-    <link>/tags/politics/</link>
+    <link>https://whodat-a.netlify.com/tags/politics/</link>
     <description>Recent content in Politics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 03 Feb 2017 22:21:56 -0600</lastBuildDate>
-    
-	<atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 03 Feb 2017 22:21:56 -0600</lastBuildDate><atom:link href="https://whodat-a.netlify.com/tags/politics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Immigration bans and Physicians</title>
-      <link>/post/foreign-physicians/</link>
+      <link>https://whodat-a.netlify.com/post/foreign-physicians/</link>
       <pubDate>Fri, 03 Feb 2017 22:21:56 -0600</pubDate>
       
-      <guid>/post/foreign-physicians/</guid>
+      <guid>https://whodat-a.netlify.com/post/foreign-physicians/</guid>
       <description>My first day on my Surgery rotation was a whirlwind, filled with excitement at to be part of a surgery and have an idea about what is going on and the fear of getting pimped and not knowing the answer; but, honestly, my biggest fear was somehow managing to contaminate the field. Somehow I misread the numbers on the OR and went into the wrong room as a case was starting.</description>
     </item>
     
