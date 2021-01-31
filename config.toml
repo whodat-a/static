@@ -1,7 +1,7 @@
 baseURL = "http://whodat-a.netlify.app"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Some Musings"
+title = "Some Musings from a PGY-2many"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
