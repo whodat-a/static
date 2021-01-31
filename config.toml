@@ -1,4 +1,5 @@
-baseURL = "https://whodat-a.netlify.com/"
+baseURL = "https://whodat-a.github.io/site/"
+publishDir = "docs"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Some Musings"
