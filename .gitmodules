@@ -1,3 +1,6 @@
 [submodule "themes/hermit"] 
   path = themes/hermit 
   url = https://github.com/Track3/hermit
+[submodule "themes/devise"]
+	path = themes/devise
+	url = https://github.com/austingebauer/devise.git
