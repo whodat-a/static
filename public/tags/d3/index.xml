@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>d3 on Some Musings</title>
-    <link>https://whodat-a.github.io/site/tags/d3/</link>
-    <description>Recent content in d3 on Some Musings</description>
+    <title>d3 on Some Musings from a PGY-2many</title>
+    <link>http://whodat-a.netlify.app/tags/d3/</link>
+    <description>Recent content in d3 on Some Musings from a PGY-2many</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 27 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://whodat-a.github.io/site/tags/d3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://whodat-a.netlify.app/tags/d3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Patient Census in Shiny Form</title>
+      <link>http://whodat-a.netlify.app/post/patient-census/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://whodat-a.netlify.app/post/patient-census/</guid>
+      <description>The strains of constant admissions in residency is no joke. So when I had the chance to look at my residency&amp;rsquo;s admission data, I was curious if our patient census felt as crushing as it actually was:
+(Patient Census Shiny App)[https://whodat-a.shinyapps.io/Patient_Census/]</description>
+    </item>
+    
     <item>
       <title>Specialty Paths</title>
-      <link>https://whodat-a.github.io/site/projects/specialty-paths/</link>
+      <link>http://whodat-a.netlify.app/projects/specialty-paths/</link>
       <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://whodat-a.github.io/site/projects/specialty-paths/</guid>
+      <guid>http://whodat-a.netlify.app/projects/specialty-paths/</guid>
       <description></description>
     </item>
     

@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>r on Some Musings</title>
-    <link>https://whodat-a.github.io/site/tags/r/</link>
-    <description>Recent content in r on Some Musings</description>
+    <title>R on Some Musings from a PGY-2many</title>
+    <link>http://whodat-a.netlify.app/tags/r/</link>
+    <description>Recent content in R on Some Musings from a PGY-2many</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 01 Jun 2017 20:15:43 -0500</lastBuildDate><atom:link href="https://whodat-a.github.io/site/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://whodat-a.netlify.app/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Patient Census in Shiny Form</title>
+      <link>http://whodat-a.netlify.app/post/patient-census/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://whodat-a.netlify.app/post/patient-census/</guid>
+      <description>The strains of constant admissions in residency is no joke. So when I had the chance to look at my residency&amp;rsquo;s admission data, I was curious if our patient census felt as crushing as it actually was:
+(Patient Census Shiny App)[https://whodat-a.shinyapps.io/Patient_Census/]</description>
+    </item>
+    
+    <item>
+      <title>Patient Census</title>
+      <link>http://whodat-a.netlify.app/projects/2020-07-20-patient-census/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://whodat-a.netlify.app/projects/2020-07-20-patient-census/</guid>
+      <description>The strains of constant admissions in residency is no joke. So when I had the chance to look at my residency&amp;rsquo;s admission data, I was curious if our patient census felt as crushing as it actually was:
+(Patient Census Shiny App)[https://whodat-a.shinyapps.io/Patient_Census/]</description>
+    </item>
+    
     <item>
       <title>Making a Cartogram with R (and some outside help)</title>
-      <link>https://whodat-a.github.io/site/post/making_cartogram/</link>
+      <link>http://whodat-a.netlify.app/post/making_cartogram/</link>
       <pubDate>Thu, 01 Jun 2017 20:15:43 -0500</pubDate>
       
-      <guid>https://whodat-a.github.io/site/post/making_cartogram/</guid>
+      <guid>http://whodat-a.netlify.app/post/making_cartogram/</guid>
       <description>#Respect Much of this tutorial could not have been accomplished without Frank Hecker&amp;rsquo;s Blog including a key function to create a dataframe from the shapefiles.
 Some Background In April, Peter Kahn and Tova Gardin published a Research Letter in the Journal of the American Medical Association (JAMA). The article includes a table of number and percent of active physicians holding H1B visas. A few things surprised me in the map.</description>
     </item>

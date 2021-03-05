@@ -61,7 +61,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[params.social]]
     name = "github"
-    url = "https://github.com/whodat_a"
+    url = "https://github.com/whodat-a"
 
 [menu]
 

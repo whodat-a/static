@@ -11,7 +11,7 @@ comments: no
 images: ~
 ---
 
-<iframe src="/plots/D3/index.html"
+<iframe src="/static/plots/D3/index.html"
     style="max-width = 90%"
     sandbox="allow-same-origin allow-scripts"
     width="1200"
